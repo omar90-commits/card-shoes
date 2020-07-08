@@ -1,0 +1,7 @@
+@import '../colores/colores';
+
+.btn-azul {
+	background-color: map-get($coloresMaps, "azul");
+	color: map-get($coloresMaps, "blanco");
+	border-radius: 0;
+}

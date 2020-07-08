@@ -1,0 +1,15 @@
+.separador {
+	@for $i from 1 through 5 {
+		.size {
+			background-color: #DEDEDE;
+			width: 30px;
+			height: 30px;
+			border-radius: 6px;
+			cursor: pointer;
+			margin-right: .5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

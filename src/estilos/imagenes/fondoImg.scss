@@ -1,0 +1,31 @@
+@import '../colores/colores';
+
+.fondo-img {
+	@for $i from 1 through length($coloresMaps) {
+		&.#{nth(map-keys($coloresMaps), $i)} {
+			background-image: linear-gradient(to left, map-get($coloresMaps, #{nth(map-keys($coloresMaps), $i)}), #{nth(map-values($coloresGradiantes), $i)});
+		}
+	}
+
+	img {
+		width: 90%;
+		transform: rotate(-10deg);
+	}
+}
+
+@media (min-width: 992px) {
+	.fondo-img {
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		
+		img {
+			width: 100%;
+			transform: rotate(-20deg) translateX(-70px);
+		}
+
+		&.col-lg-5 {
+			height: 443px !important;
+			max-width: 320px !important;
+		}
+	}
+} 

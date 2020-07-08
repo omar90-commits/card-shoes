@@ -1,0 +1,22 @@
+@import './size';
+@import './boton';
+
+.separador {
+	border-bottom: 1px solid #DEDEDE;
+	margin-bottom: 1rem;
+
+	p {
+		margin-bottom: .5rem;
+	}
+
+	@each $i in map-keys($coloresMaps) { 
+		.#{$i} {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-right: .5rem;
+			background-color: map-get($coloresMaps, #{$i});
+		}
+	}
+}
